@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.5)  15 OCT 2014 19:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.5)  16 OCT 2014 23:38
 entering extended mode
 **solar-system.tex
-("D:\Studium\5. Semester\Computational Physics\Project3\solar-system.tex"
+("D:\Studium\5. Semester\Computational Physics\Project3\latex\solar-system.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -1102,7 +1102,8 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks40
 \minrowclearance=\skip58
 )
-("D:\Studium\5. Semester\Computational Physics\Project3\solar-system.aux")
+("D:\Studium\5. Semester\Computational Physics\Project3\latex\solar-system.aux"
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
@@ -1117,8 +1118,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 46.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 46.
@@ -1159,12 +1159,12 @@ LaTeX Info: Redefining \ref on input line 46.
 LaTeX Info: Redefining \pageref on input line 46.
 LaTeX Info: Redefining \nameref on input line 46.
 
-("D:\Studium\5. Semester\Computational Physics\Project3\solar-system.out")
-("D:\Studium\5. Semester\Computational Physics\Project3\solar-system.out")
+("D:\Studium\5. Semester\Computational Physics\Project3\latex\solar-system.out"
+) ("D:\Studium\5. Semester\Computational Physics\Project3\latex\solar-system.ou
+t")
 \@outlinefile=\write4
 LaTeX Font Info:    Try loading font information for U+msa on input line 48.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 48.
@@ -1177,30 +1177,31 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 48.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-("D:\Studium\5. Semester\Computational Physics\Project3\solar-system.toc")
+("D:\Studium\5. Semester\Computational Physics\Project3\latex\solar-system.toc"
+)
 \tf@toc=\write5
+ [1
 
-[1
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
-
-("D:\Studium\5. Semester\Computational Physics\Project3\solar-system.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
+("D:\Studium\5. Semester\Computational Physics\Project3\latex\solar-system.aux"
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
 Package rerunfilecheck Info: File `solar-system.out' has not changed.
 (rerunfilecheck)             Checksum: C7D0B7C5F44320815E43F09CBFF2FB26;415.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
  ) 
 Here is how much of TeX's memory you used:
- 20120 strings out of 493921
- 361312 string characters out of 3144880
- 413022 words of memory out of 3000000
- 23019 multiletter control sequences out of 15000+200000
- 16046 words of font info for 45 fonts, out of 3000000 for 9000
+ 20150 strings out of 493921
+ 361730 string characters out of 3144880
+ 419022 words of memory out of 3000000
+ 23030 multiletter control sequences out of 15000+200000
+ 18240 words of font info for 56 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,7n,92p,451b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,15n,92p,451b,353s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\beni\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
 crm1000.pk> <C:\Users\beni\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
 \dpi600\ecbx1000.pk> <C:\Users\beni\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
@@ -1209,10 +1210,14 @@ ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\beni\AppData\Local\MiKTeX\2.9\
 fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk> <C:\Users\beni\AppData\Local\Mi
 KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\beni\AppData
 \Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\ben
-i\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk>
-Output written on solar-system.pdf (4 pages, 72375 bytes).
+i\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on solar-system.pdf (5 pages, 128385 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
+ 359 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
  77 words of extra memory for PDF output out of 10000 (max. 10000000)
 

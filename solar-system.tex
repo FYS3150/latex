@@ -35,7 +35,7 @@ language=C++,
 numbers=left, stepnumber=1, numbersep=4pt, frame=shadowbox,#1}}{}
 
 
-\title{\textbf{Simulation of the solar system}}
+\title{\textbf{Simulation of the Solar System}}
 
 \author{Massimo Giordano, Benjamin Haas}
 
@@ -50,15 +50,100 @@ numbers=left, stepnumber=1, numbersep=4pt, frame=shadowbox,#1}}{}
 \end{center}
 
 \begin{abstract}
-The following article describes a way simulate the solar system considering the sun, the earth, and earth's moon. 
+The following article describes a way to simulate the solar system with consideration of the occuring many body problem. The physical theory is based on Newton's second law of motion, which gets discretized into certain time steps. A solution is then obtained by either making use of the Runge-Kutta-Four- or the Verlet-Algorithm. Furthermore, both algorithms are compared of stability. 
 \end{abstract}
 \tableofcontents
 \pagebreak
 
 \section{Introduction}
-das ist ein test
+how important differential equations are for science. often sets of coupled differential equations, example solar system. too complex for analytic aproacccce. discreticing. first part focus on solvers for sun and earth with small earthmass, second part expanding problem to solar system
 
 \section{Theoretical Concept}
+As mentioned in the introduction, the first part of the work focuses on testing the Runge-Kutta-Four- and the Verlet-Algorithm, before the problem is expanded to the solar system in the second part.
+\newline
+To start therefore, we first consider a system of Sun and one planet, say Earth. The acting force between both bodys is given by the gravitational force $F_G$
+\begin{align}
+F_G=\frac{GM_{\mathrm{Sun}}M_{\mathrm{Earth}}}{r^2},
+\end{align}
+where $M_{\mathrm{sun}}$ is the mass of the Sun, $M_{\mathrm{Earth}}$ is the mass of Earth, $G$ is the Gravitational Constant and $r$ the distance between Sun and Earth.
+As we want to test different solvers for ordinary differential equations, we assume a much larger mass of the Sun than the mass of the Earth. Consequently, we can neglect the movement of the Sun.
+Furthermore, there exists no tangential force. For this reason, the movement takes place in a plane, namely the $xy$-plane. 
+In this case, Newton's second law of motion reads
+
+\begin{subequations}
+\begin{align}
+\frac{d^2x}{dt^2}=\frac{F_{G,x}}{M_{\mathrm{Earth}}},
+\end{align}
+and 
+\begin{align}
+\frac{d^2y}{dt^2}=\frac{F_{G,y}}{M_{\mathrm{Earth}}},
+\end{align}
+\end{subequations}
+ where $F_{G,x}$ and $F_{G,y}$ are the $x$ and $y$ components of the gravitational force.
+\newline
+These two second order differential equations can be rewritten as a set of four coupled first order differential equations. We define a velocity $v(t) = dx/dt$ and get 
+
+
+
+
+
+
+
+\noindent\begin{tabularx}{\textwidth}{@{}XX@{}}
+  \begin{equation}
+  \frac{dx(t)}{dt} = v_x 
+  \end{equation} &
+  \begin{equation}
+  \frac{v_x(t)}{dt} = \frac{F_{\mathrm{G,x}}}{M_\mathrm{Earth}}
+  \end{equation}
+\end{tabularx}
+
+\noindent\begin{tabularx}{\textwidth}{@{}XX@{}}
+  \begin{equation}
+  \frac{dy(t)}{dt} = v_y
+  \end{equation} &
+  \begin{equation}
+  \frac{v_y(t)}{dt} = \frac{F_{\mathrm{G,y}}}{M_\mathrm{Earth}}
+  \end{equation}
+\end{tabularx}
+
+These first order differential equations are used in the Runge-Kutta-Algorithm, but not in the Verlet-Algorithm, as the latter just calculates with accelerations. 
+
+
+
+
+
+
+
+The x and y component of the gravitational force can easily be derived by the theorem of intersecting lines.
+It holds
+\begin{subequations}
+\begin{align}
+\frac{r}{x} = \frac{F_G}{F_{G,x}}
+\end{align}
+\begin{align}
+\frac{r}{y} = \frac{F_G}{F_{G,y}}
+\end{align}
+\end{subequations}
+and therefore
+\begin{subequations}
+\begin{align}
+F_{G,x} = \frac{x}{r} F_G
+\end{align}
+\begin{align}
+F_{G,y} = \frac{y}{r} F_G
+\end{align}
+\end{subequations}
+with $F$ being the absolute value of the gravitational force.
+\newline
+We can also estimate the Gravitational Constant by the assumption of a cicular orbit of the Earth around the Sun. This estimate sounds quite reasonable as the acutal orbit's eccentricity is about 0.017, namely almost a cicular orbit.
+In this case, the gravitational force is balanced by the centripetal force. Therefore, the absolute values must be equal
+\begin{align}
+F_{\mathrm{ZP}} = \frac{M_{\mathrm{Earth}}v^2}{r}=\frac{GM_{\mathrm{Sun}}M_{\mathrm{Earth}}}{r^2} = F_G,
+\end{align}
+with $v$ being the orbital velocity of Earth.
+
+ 
  
 \section{Method}
 
@@ -76,7 +161,7 @@ Prova hello!
 \item M. Hjorth-Jensen, 
 Computational Physics, University of Oslo (2013).
 \item M. Hjorth-Jensen, 
-Project2, University of Oslo (2013).
+Project3, University of Oslo (2013).
 \item www.cplusplus.com
 \end{itemize}
 
