@@ -26,6 +26,7 @@
 \usepackage{cancel}
 \usepackage{color}
 \usepackage{colortbl}
+\usepackage{wrapfig}
 \allowdisplaybreaks
 
 \lstnewenvironment{codice_arduino}[1][]
@@ -82,6 +83,8 @@ and
  where $F_{G,x}$ and $F_{G,y}$ are the $x$ and $y$ components of the gravitational force.
 \newline
 These two second order differential equations can be rewritten as a set of four coupled first order differential equations. We define a velocity $v(t) = dx/dt$ and get 
+
+
 
 
 
@@ -179,12 +182,31 @@ y(t) = \int a(t)dt \ \ and \  \ y_{i+1} = y_i + \int_{t_i}{t_{i+1}} a(t)dt
 \end{align}
 If we interpret the integral as the area under the curve we have that:
 \begin{align}
-\int_{t_i}{t_{i+1}} a(t)dt \simeq \Delta t a(t_{i+\frac{1}{2}})
+\int_{t_i}{t_{i+1}} a(t)dt \simeq \Delta t \  a(t_{i+\frac{1}{2}})
 \end{align}
+Using the Simpson's formula we can amproximate an integral of a finit polinomius in this way: 
+\begin{align}
+55
+\end{align}
+
+
+\begin{wrapfigure}{l}{0pt}
+\centering
+\includegraphics[scale=0.3]{sim_int.png}
+\caption{Aproximation of Simposon's formula}
+\end{wrapfigure}
+
+
+ \begin{figure}[!h]
+\centering
+\includegraphics[width=1.02\textwidth]{outvel.pdf}
+\caption{graf}
+\end{figure}
+
 
 A grapghic interpreation of the algorithm is very usefull to understan better it:
 
-prova ciao !!ee
+prova ciao !!ee 33
 32
 \section{Tuned Program}
 \section{Energy states and probability functions}\label{2electrons}

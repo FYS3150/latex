@@ -89,6 +89,8 @@ These two second order differential equations can be rewritten as a set of four 
 
 
 
+
+
 \noindent\begin{tabularx}{\textwidth}{@{}XX@{}}
   \begin{equation}
   \frac{dx(t)}{dt} = v_x 
@@ -179,11 +181,16 @@ y(t) = \int a(t)dt \ \ and \  \ y_{i+1} = y_i + \int_{t_i}{t_{i+1}} a(t)dt
 \end{align}
 If we interpret the integral as the area under the curve we have that:
 \begin{align}
-\int_{t_i}{t_{i+1}} a(t)dt \simeq \Delta t a(t_{i+\frac{1}{2}})
+\int_{t_i}{t_{i+1}} a(t)dt \simeq \Delta t \  a(t_{i+\frac{1}{2}})
 \end{align}
+Using the Simpson'2 fomrmula to amproximate an integral of a finit polinomius we can write: 
+
+
 
 A grapghic interpreation of the algorithm is very usefull to understan better it:
 
+prova ciao !!ee 33
+32
 \section{Tuned Program}
 \section{Energy states and probability functions}\label{2electrons}
 
