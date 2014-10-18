@@ -165,9 +165,27 @@ Since the velocity follow this equation $v(t + \Delta t) = v(t) + a(t)\Delta t$ 
 \begin{align}
 v_n(t + \Delta t) = v_n(t + \frac{\Delta t}{2}) + \frac{1}{2}a_n(t+ \Delta t)\Delta t;
 \end{align}
-The Verlet algorithm provides a good preservation of the sympletic form on phase space also if it doesn't require a big computational cost. This mean it preserve the kinetic energy
+The Verlet algorithm provides a good preservation of the sympletic form on phase space also if it doesn't require a big computational cost. This means it preserves the kinetic energy for huge period of time. 
 
+The Rugge Kutta method use only the first derivates, is for that reason that we slip the second order differential equation in two first order differential equation. 
 
+Before starting to explain this algorithm we make some observations: 
+\begin{align}
+\frac{dp(t)}{dt} = v(t) \ \ and \ \ \frac{dv(t)}{t} = a(t) 
+\end{align}
+We discuss the case for solve the velocity knowing that it's the same for the position.
+\begin{align}
+y(t) = \int a(t)dt \ \ and \  \ y_{i+1} = y_i + \int_{t_i}{t_{i+1}} a(t)dt
+\end{align}
+If we interpret the integral as the area under the curve we have that:
+\begin{align}
+\int_{t_i}{t_{i+1}} a(t)dt \simeq \Delta t a(t_{i+\frac{1}{2}})
+\end{align}
+
+A grapghic interpreation of the algorithm is very usefull to understan better it:
+
+prova ciao !!ee
+32
 \section{Tuned Program}
 \section{Energy states and probability functions}\label{2electrons}
 
