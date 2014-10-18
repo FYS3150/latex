@@ -148,6 +148,68 @@ with $v$ being the orbital velocity of Earth.
 
  %we set the value of G*Msun = 4*pi^2 and the MSun = 1 !!!!  I think that is also better write something about the Astronomic units.
  
+ 
+ 
+\subsection{Analytical Two Body Problem}
+In the previous considerations, we assumed a much larger mass of the Sun than the mass of the Earth. For that reason, we could neglect the motion of the Sun and easily derive relations. We now do consider Earth's mass and solve the occuring two body problem.
+\newline
+To start with, we let $x_1$, $m_1$ and $x_2$, $m_2$ be the position vectors and masses of body 1 and body 2. We can easily calculate the acting gravitational forces 
+
+\begin{subequations}
+\begin{align}
+\vec{F}_{2,1} (\vec{x}_1, \vec{x}_2) = - Gm_1m_2 \frac{\vec{x}_1-\vec{x}_2}{\lvert \vec{x}_1 - \vec{x}_2 \lvert ^3}.
+\end{align}
+and
+\begin{align}
+\vec{F}_{1,2} (\vec{x}_1, \vec{x}_2) = - Gm_1m_2 \frac{\vec{x}_2-\vec{x}_1}{\lvert \vec{x}_1 - \vec{x}_2 \lvert ^3}
+\end{align}
+\end{subequations}
+what leads to
+\begin{subequations}
+\begin{align}\label{ddx1}
+\frac{\partial^2\vec{x}_1}{\partial t^2}  = - Gm_2 \frac{\vec{x}_1-\vec{x}_2}{\lvert \vec{x}_1 - \vec{x}_2 \lvert ^3} 
+\end{align}
+and
+\begin{align}\label{ddx2}
+\frac{\partial^2\vec{x}_2}{\partial t^2}  = - Gm_1 \frac{\vec{x}_2-\vec{x}_1}{\lvert \vec{x}_1 - \vec{x}_2 \lvert ^3}. 
+\end{align}
+\end{subequations}
+We introduce new vectors for the relative coordinate $\vec{r} := \vec{x}_1 - \vec{x}_2$ and the Center of Mass (COM) vector $\vec{R} := (m_1 \vec{x}_1 + m_2 \vec{x}_2)/(m_1 + m_2)$ and call $M=m_1 + m_2$. We plug equations \ref{ddx1} and \ref{ddx2} into the definition of $\vec{r}$ as well as into the definition of $\vec{R}$ and obtain
+\begin{align}\label{ddR}
+\frac{\partial^2 \vec{R}}{\partial t^2} =0
+\end{align}
+and
+\begin{align}
+\frac{\partial^2 \vec{r}}{\partial t^2} = -GM \frac{\vec{r}}{r^3}
+\end{align}
+Equation \ref{ddR} is used in section \ref{energyc} to demonstrate energy conservation in the solar system.
+
+\subsection{Numerical n Body Problem}
+If we expand our system to the solar system with consideration of the Sun and all nine planets, we are dealing with a ten body problem. Note that we count Pluto as a planet for historical reasons. For such a "complex" system, the by now only well known way to get quantitative results is a numerical approach.
+To start with, we calculate for every timestep for every body all forces, which are acting on it. We get:
+
+\begin{align} \label{F}
+\frac{d \vec{v}_j(t)}{dt} m_j = \vec{F}_j(t) = G m_j \sum \limits_{i \neq j} \left[ \frac{m_i}{\lvert \vec{r}_i(t)-\vec{r}_j(t) \lvert ^2} \frac{\vec{r}_i-\vec{r}_j}{\lvert \vec{r}_i-\vec{r}_j \lvert} \right]
+\end{align}
+To solve equation \ref{F}, we integrate, discretize and finally obtain
+\begin{align}\label{v}
+\vec{v}_{n+1} = \vec{v}_n +  G \int_{t_n}^{t_{n+1}} \sum \limits_{i \neq j} \left[ m_i \frac{\vec{r}_i-\vec{r}_j}{\lvert \vec{r}_i(t)-\vec{r}_j(t) \lvert ^3} \right] dt.
+\end{align}
+Equation \ref{v} will be solved in section \ref{method}.
+
+
+
+
+
+
+\subsection{Conservation of Energy and Angular Momentum}\label{energyc}
+
+The conservation of energy is tested in the simulation.
+
+
+ 
+ 
+ 
 \section{Method}
 To solve a generic problem of $n$ couple of differential equation we can perfome a so-called $Rugge \ Kutta$ or $Verlet $Algorithm. These two algorithms use a different approach to solve the problem. We start to discuss the Verlet Algortihm that we use. 
 
@@ -184,23 +246,24 @@ If we interpret the integral as the area under the curve we have that:
 \begin{align}
 \int_{t_i}{t_{i+1}} a(t)dt \simeq \Delta t \  a(t_{i+\frac{1}{2}})
 \end{align}
+\begin{wrapfigure}{r}{0pt}
+\includegraphics[scale=0.3]{sim_int.png}
+\caption{Aproximation with Simposon's formula}
+\end{wrapfigure}
+To have a higher precision we can extimate more time the middle poit 
+
+
 Using the Simpson's formula we can amproximate an integral of a finit polinomius in this way: 
 \begin{align}
 \int_{t_i}{t_{i+1}} a(t)dt \simeq \frac{\Delta t}{6} \left [ a(t_i)+4a(t_{i+\frac{1}{2}})+ a(t_{i+1}) \right ] 
 \end{align}
 
 
-\begin{wrapfigure}{l}{0pt}
-\centering
-\includegraphics[scale=0.3]{sim_int.png}
-\caption{Aproximation of Simposon's formula}
-\end{wrapfigure}
 
 
 
 
- \begin{figure}[!h]
-\centering
+ \begin{figure}[H]
 \includegraphics[width=1.02\textwidth]{outvel.pdf}
 \caption{graf}
 \end{figure}
