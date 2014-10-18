@@ -246,20 +246,31 @@ If we interpret the integral as the area under the curve we have that:
 \begin{align}
 \int_{t_i}{t_{i+1}} a(t)dt \simeq \Delta t \  a(t_{i+\frac{1}{2}})
 \end{align}
+
 \begin{wrapfigure}{r}{0pt}
 \includegraphics[scale=0.3]{sim_int.png}
-\caption{Aproximation with Simposon's formula}
+%\caption{Aproximation with Simposon's formula}
 \end{wrapfigure}
-To have a higher precision we can extimate more time the middle poit 
-
 
 Using the Simpson's formula we can amproximate an integral of a finit polinomius in this way: 
 \begin{align}
 \int_{t_i}{t_{i+1}} a(t)dt \simeq \frac{\Delta t}{6} \left [ a(t_i)+4a(t_{i+\frac{1}{2}})+ a(t_{i+1}) \right ] 
 \end{align}
 
+To have a higher precision we can extimate more time the middle poit in this way:
 
-Try overwrite togheder
+\begin{align}
+k1 &= a(t_i) \ \  \to \  \  y_{i+ \frac{1}{2}} = y_i + \frac{\Delta t}{2} \ k1 \ \ \text{first aproximetion of middle point} \\
+k2 &= a(t_{i+ \frac{1}{2}}) \ \  \to \ \ y_{i+ \frac{1}{2}} = y_i + \frac{\Delta t}{2} \ k2 \ \ \text{second aproximetion of middle point} \\
+k3 &= a(t_{i+ \frac{1}{2}}) \ \  \to \ \ y_{i+1} = y_i + \Delta t \ k3 \ \ \text{first aproximetion of point } \ i + 1 \\
+k4 &= a(t_{i+ 1}) \ \ \  \  
+\end{align}
+
+Note that $K4$ can be founding knowing the value of the position computed at the previus step
+A grapghic interpreation of the algorithm is very usefull to understan better it:
+
+
+
 
 
 
@@ -273,7 +284,6 @@ Try overwrite togheder
 \end{figure}
 
 
-A grapghic interpreation of the algorithm is very usefull to understan better it:
 
 prova ciao !!ee 33
 32
