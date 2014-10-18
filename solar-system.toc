@@ -1,9 +1,12 @@
 \select@language {english}
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}
 \contentsline {section}{\numberline {2}Theoretical Concept}{2}{section.2}
-\contentsline {section}{\numberline {3}Method}{3}{section.3}
-\contentsline {section}{\numberline {4}Tuned Program}{4}{section.4}
-\contentsline {section}{\numberline {5}Energy states and probability functions}{4}{section.5}
-\contentsline {section}{\numberline {6}Analytic Solution}{5}{section.6}
-\contentsline {section}{\numberline {7}Conculsions}{6}{section.7}
-\contentsline {section}{\numberline {8}References}{6}{section.8}
+\contentsline {subsection}{\numberline {2.1}Analytical Two Body Problem}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Numerical n Body Problem}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Conservation of Energy and Angular Momentum}{4}{subsection.2.3}
+\contentsline {section}{\numberline {3}Method}{4}{section.3}
+\contentsline {section}{\numberline {4}Tuned Program}{5}{section.4}
+\contentsline {section}{\numberline {5}Energy states and probability functions}{5}{section.5}
+\contentsline {section}{\numberline {6}Analytic Solution}{6}{section.6}
+\contentsline {section}{\numberline {7}Conculsions}{7}{section.7}
+\contentsline {section}{\numberline {8}References}{7}{section.8}
