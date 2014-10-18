@@ -165,7 +165,7 @@ Since the velocity follow this equation $v(t + \Delta t) = v(t) + a(t)\Delta t$ 
 \begin{align}
 v_n(t + \Delta t) = v_n(t + \frac{\Delta t}{2}) + \frac{1}{2}a_n(t+ \Delta t)\Delta t;
 \end{align}
-The Verlet algorithm provides a good preservation of the sympletic form on phase space also if it doesn't require a big computational cost. This mean it preserve the kinetic energy
+
 
 
 \section{Tuned Program}
