@@ -246,17 +246,18 @@ If we interpret the integral as the area under the curve we have that:
 \begin{align}
 \int_{t_i}{t_{i+1}} a(t)dt \simeq \Delta t \  a(t_{i+\frac{1}{2}})
 \end{align}
+\begin{wrapfigure}{l}{0pt}
+\centering
+\includegraphics[scale=0.3]{sim_int.png}
+\caption{Aproximation of Simposon's formula}
+\end{wrapfigure}
+
 Using the Simpson's formula we can amproximate an integral of a finit polinomius in this way: 
 \begin{align}
 \int_{t_i}{t_{i+1}} a(t)dt \simeq \frac{\Delta t}{6} \left [ a(t_i)+4a(t_{i+\frac{1}{2}})+ a(t_{i+1}) \right ] 
 \end{align}
 
 
-\begin{wrapfigure}{l}{0pt}
-\centering
-\includegraphics[scale=0.3]{sim_int.png}
-\caption{Aproximation of Simposon's formula}
-\end{wrapfigure}
 
 
 
